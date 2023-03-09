@@ -90,15 +90,6 @@ namespace CSV2XMLConvert
             {
 
 
-                //var header = File.ReadLines(filePath).First().Split(','); //Read header
-                //var lines = File.ReadAllLines(filePath).Skip(1); //Skip header row        
-
-                ////format the xml how you want
-                //var xml = new XElement("EmpDetails",
-                //    lines.Select(line => new XElement("Item",
-                //        line.Split(',').Select((column, index) => new XElement(header[index], column)))));
-
-
                 // Read all lines from the CSV file
                 var fileContent = File.ReadAllLines(filePath);
 
@@ -110,6 +101,97 @@ namespace CSV2XMLConvert
                 // Split the first line into headers, and replace any spaces with underscores
                 string[] headers = fileContent[0].Split(',').Select(x => x.Replace(" ", "_").Replace("/", "_").Trim('\"')).ToArray();
 
+                #region
+                for (int i= 0; i < headers.Length; i++)
+                {
+                    if (headers[i] == "ApplicationNumber")
+                    {
+                        headers[i] = "applicationId";
+                    }
+                    else if (headers[i] == "BannerID")
+                    {
+                        headers[i] = "studentId";
+                    }
+                    else if (headers[i] == "StudentID")
+                    {
+                        headers[i] = "globalId";
+                    }
+                    else if (headers[i] == "LastName")
+                    {
+                        headers[i] = "lastName";
+                    }
+                    else if (headers[i] == "FirstName")
+                    {
+                        headers[i] = "firstName";
+                    }
+                    else if (headers[i] == "MiddleName")
+                    {
+                        headers[i] = "middleName";
+                    }
+                    else if (headers[i] == "Suffix")
+                    {
+                        headers[i] = "suffix";
+                    }
+                    else if (headers[i] == "FormerLastName")
+                    {
+                        headers[i] = "maidenName";
+                    }
+                    else if (headers[i] == "MailingStreet")
+                    {
+                        headers[i] = "addressLine1";
+                    }                                   
+                    else if (headers[i] == "MailingCity")
+                    {
+                        headers[i] = "city";
+                    }
+                    else if (headers[i] == "Mailing_Sate_Province")
+                    {
+                        headers[i] = "state";
+                    }
+                    else if (headers[i] == "Mailing_Zip_Postal_Code")
+                    {
+                        headers[i] = "postalCode";
+                    }
+                    else if (headers[i] == "Home_Phone")
+                    {
+                        headers[i] = "homePhone";
+                    }
+                    else if (headers[i] == "Other_Phone")
+                    {
+                        headers[i] = "workPhone";
+                    }
+                    else if (headers[i] == "Mobile")
+                    {
+                        headers[i] = "cellPhone";
+                    }
+                    else if (headers[i] == "Email")
+                    {
+                        headers[i] = "email1";
+                    }
+                    else if (headers[i] == "Alt_Email")
+                    {
+                        headers[i] = "email2";
+                    }
+                    else if (headers[i] == "Citizenship")
+                    {
+                        headers[i] = "primaryCitizenship";
+                    }
+                    else if (headers[i] == "Application_Stage")
+                    {
+                        headers[i] = "applicationStatusCode";
+                    }
+                    else if (headers[i] == "Application_Staus")
+                    {
+                        headers[i] = "applicationStatusDesc";
+                    }
+                    else if (headers[i] == "Application_Submit_Date")
+                    {
+                        headers[i] = "appliedDate";
+                    }
+
+                    #endregion
+
+                }
                 // Skip the first line (headers)
                 fileContent = fileContent.Skip(1).ToArray();
 
@@ -129,7 +211,7 @@ namespace CSV2XMLConvert
                     // If the row has no data, create a row element with "null" values for each column
                     if (string.IsNullOrWhiteSpace(line))
                     {
-                        xml.Add(new XElement("Item", headers.Select(header => new XElement(header, "null"))));
+                        xml.Add(new XElement("Item", headers.Select(header => new XElement(header, " "))));
                     }
                     else
                     {
@@ -137,7 +219,7 @@ namespace CSV2XMLConvert
                         var item = new XElement("Item");
                         for (int i = 0; i < headers.Length && i < columns.Length; i++)
                         {
-                            var value = string.IsNullOrWhiteSpace(columns[i]) ? "null" : columns[i];
+                            var value = string.IsNullOrWhiteSpace(columns[i]) ? " " : columns[i];
                             item.Add(new XElement(headers[i], value));
                         }
                         xml.Add(item);
