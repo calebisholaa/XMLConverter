@@ -1,0 +1,15 @@
+C:\Users\gradapp\source\repos\CSV2XMLConvert\CSV2XMLConvert\bin\Debug\CSV2XMLConvert.exe.config
+C:\Users\gradapp\source\repos\CSV2XMLConvert\CSV2XMLConvert\bin\Debug\CSV2XMLConvert.exe
+C:\Users\gradapp\source\repos\CSV2XMLConvert\CSV2XMLConvert\bin\Debug\CSV2XMLConvert.pdb
+C:\Users\gradapp\source\repos\CSV2XMLConvert\CSV2XMLConvert\obj\Debug\CSV2XMLConvert.csproj.AssemblyReference.cache
+C:\Users\gradapp\source\repos\CSV2XMLConvert\CSV2XMLConvert\obj\Debug\CSV2XMLConvert.csproj.SuggestedBindingRedirects.cache
+C:\Users\gradapp\source\repos\CSV2XMLConvert\CSV2XMLConvert\obj\Debug\CSV2XMLConvert.from1.resources
+C:\Users\gradapp\source\repos\CSV2XMLConvert\CSV2XMLConvert\obj\Debug\CSV2XMLConvert.Properties.Resources.resources
+C:\Users\gradapp\source\repos\CSV2XMLConvert\CSV2XMLConvert\obj\Debug\CSV2XMLConvert.csproj.GenerateResource.cache
+C:\Users\gradapp\source\repos\CSV2XMLConvert\CSV2XMLConvert\obj\Debug\CSV2XMLConvert.csproj.CoreCompileInputs.cache
+C:\Users\gradapp\source\repos\CSV2XMLConvert\CSV2XMLConvert\obj\Debug\CSV2XMLConvert.exe
+C:\Users\gradapp\source\repos\CSV2XMLConvert\CSV2XMLConvert\obj\Debug\CSV2XMLConvert.pdb
+C:\Users\gradapp\source\repos\CSV2XMLConvert\CSV2XMLConvert\bin\Debug\CSV2XMLConvert.exe.manifest
+C:\Users\gradapp\source\repos\CSV2XMLConvert\CSV2XMLConvert\bin\Debug\CSV2XMLConvert.application
+C:\Users\gradapp\source\repos\CSV2XMLConvert\CSV2XMLConvert\obj\Debug\CSV2XMLConvert.exe.manifest
+C:\Users\gradapp\source\repos\CSV2XMLConvert\CSV2XMLConvert\obj\Debug\CSV2XMLConvert.application
