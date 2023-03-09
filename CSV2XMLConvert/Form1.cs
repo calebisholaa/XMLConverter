@@ -217,6 +217,12 @@ namespace CSV2XMLConvert
                     {
                         // Otherwise, create a row element with values from each column
                         var item = new XElement("Item");
+                        // Modify the 9th column (index 8) to remove commas and quotes
+                        var modifiedAddress = columns[8].Replace(",", "  ").Trim('\"');
+
+                        // Join the first 8 columns with the modified address column
+                        var newColumns = columns.Take(8).Concat(new[] { modifiedAddress }).Concat(columns.Skip(9));
+
                         for (int i = 0; i < headers.Length && i < columns.Length; i++)
                         {
                             var value = string.IsNullOrWhiteSpace(columns[i]) ? " " : columns[i];

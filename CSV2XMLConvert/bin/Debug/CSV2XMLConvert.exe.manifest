@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CSV2XMLConvert.exe" size="181672">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CSV2XMLConvert.exe" size="182184">
       <assemblyIdentity name="CSV2XMLConvert" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>TnUa9ne4ZQW0jQ2NP0rlaJTAEfRrewZH9X5RVCxcATA=</dsig:DigestValue>
+        <dsig:DigestValue>8t6EXP8tvlWIAZQ8zYgSntbPBzaf9ytgmkkGBhp1uwA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
